@@ -1,298 +1,278 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap Estratégico – Proyecto de Transformación Digital para Álvaro</title>
+    <!-- Incluye Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Fondo muy oscuro */
+            color: #e0e0e0; /* Texto claro por defecto */
+        }
+        .phase-header {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .phase-header:hover {
+            background-color: #292929; /* Color de fondo al pasar el ratón para las fases */
+        }
+        .phase-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .phase-content.expanded {
+            max-height: 1000px; /* Suficiente para expandir el contenido, ajusta si es necesario */
+            transition: max-height 0.5s ease-in;
+        }
+        .icon-plus::before {
+            content: '+';
+        }
+        .icon-minus::before {
+            content: '-';
+        }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Roadmap Estratégico - Transformación Digital Álvaro&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f4;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 90%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #007bff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px 8px 0 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>header p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.intro {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #eee;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fafafa;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #e2e2e2;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.8em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2.green { background-color: #28a745; color: #fff; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2.blue { background-color: #007bff; color: #fff; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2.purple { background-color: #6f42c1; color: #fff; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2.yellow { background-color: #ffc107; color: #333; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2 span.arrow {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-section h2.collapsed span.arrow {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: rotate(-90deg);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none; /* Hidden by default */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px solid #eee;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-content.active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block; /* Shown when active */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-content h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #007bff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.4em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-content ul {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-content ul li {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #e9ecef;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #007bff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-content ul li::before {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>content: '✅';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.immediate-actions {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ffeeba;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ffc107;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.immediate-actions h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #856404;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.immediate-actions ul {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.immediate-actions ul li {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff3cd;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #ffc107;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.immediate-actions ul li::before {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>content: '📌';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #777;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px solid #eee;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Roadmap Estratégico&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Proyecto de Transformación Digital para Álvaro (Gimnasio + Expansión)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="intro"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Este documento presenta la hoja de ruta estratégica para la transformación digital del negocio de Álvaro, cubriendo desde la centralización de datos hasta la expansión y la construcción de una comunidad sólida.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="roadmap-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="green"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>🟢 Fase 1: Diagnóstico y Fundamentos (Julio 2025)</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="arrow"&gt;▼&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="roadmap-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Objetivos clave:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Centralizar la información operativa.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Visibilizar ingresos y tomar decisiones basadas en datos.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Tareas:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Implementación inicial de un **CRM** (clientes, facturación, ventas, leads).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Activación de **reportes dinámicos de ingresos netos, promociones y rentabilidad de productos**.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Estudio del flujo actual de uso de la **app de acceso**.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="roadmap-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="blue"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>🔵 Fase 2: Optimización de Operaciones y Comunidad (Agosto 2025)</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="arrow"&gt;▼&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="roadmap-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Objetivos clave:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Mejorar herramientas digitales.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Crear comunidad y fidelización.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Tareas:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Mejora y rediseño de la **página web** (atractiva, funcional y optimizada para SEO).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;**App multifuncional** (más que solo acceso):</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Envío automático de **facturas**.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Pago con **tarjeta** + generación de **suscripciones automáticas**.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Envío de **promociones diarias**.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Activación de un **asistente inteligente real**, no solo chatbot.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Módulo para clases/eventos/reservas.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Inicio de **campañas de marketing personalizadas** (por perfil, hábitos, historial).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Estimular y automatizar la venta de **suplementos** y productos físicos.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="roadmap-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="purple"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>🟣 Fase 3: Expansión Comercial (Septiembre 2025)</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="arrow"&gt;▼&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="roadmap-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Objetivos clave:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Acompañar el lanzamiento de la tienda de tatuajes.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Impulsar el uso comercial de nuevos espacios (clases, terraza, eventos).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Tareas:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Activar seguimiento de **leads con recomendaciones** (para tatuajes y nuevos eventos).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Sistema de gestión de **eventos y alquiler de espacios** (terrace + clases).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Automatización de ventas cruzadas (ej. clases + productos, gym + tattoos).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Generación de **datos analíticos** para evaluar decisiones estratégicas.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="roadmap-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="yellow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>🟡 Fase 4: Comunidad y Diferenciación (Octubre 2025 y más allá)</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="arrow"&gt;▼&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="roadmap-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Objetivos clave:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Construir comunidad en torno a salud, bienestar y vida social.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Ampliar fuentes de ingreso sin perder el foco.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Tareas:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Creación de una **plataforma comunitaria** (foro, eventos internos, recomendaciones).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Generación de **contenido digital** (canales YouTube recomendados, ejemplo: estilo **Breaking Bad** para storytelling de marca).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Segmentación para **acciones de marketing inteligente**.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Integración con herramientas de **fidelización** (recompensas, membresías, etc.).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="immediate-actions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;📌 Acciones Inmediatas&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Enviar **demo funcional** de automatización + CRM + app (jueves 10 a.m.).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Entregar propuesta gráfica de nueva página web y app.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Diagnóstico técnico actual (app, facturación, promociones, productos).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Primera campaña de marketing personalizada en test (suplementos o eventos).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&amp;copy; 2025 Proyecto de Transformación Digital Álvaro. Todos los derechos reservados.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const sections = document.querySelectorAll('.roadmap-section h2');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>sections.forEach(sectionTitle =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>sectionTitle.addEventListener('click', function() {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const content = this.nextElementSibling;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>content.classList.toggle('active');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.classList.toggle('collapsed'); // Toggle class for arrow rotation</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const arrow = this.querySelector('.arrow');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>if (content.classList.contains('active')) {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>arrow.style.transform = 'rotate(0deg)';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>arrow.style.transform = 'rotate(-90deg)';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="max-w-4xl mx-auto bg-neutral-800 shadow-xl rounded-lg overflow-hidden border border-neutral-700">
+        <!-- Título principal -->
+        <header class="bg-gradient-to-r from-neutral-900 to-neutral-800 p-6 sm:p-8 text-white text-center rounded-t-lg">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-2 leading-tight">Roadmap Estratégico</h1>
+            <p class="text-lg sm:text-xl font-light text-neutral-300">Proyecto de Transformación Digital para Álvaro (Gimnasio + Expansión)</p>
+        </header>
+
+        <main class="p-5 sm:p-7 md:p-8">
+            <!-- Sección de Fases del Roadmap -->
+            <section class="mb-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-neutral-100 mb-6 border-b-2 border-blue-500 pb-3">Fases del Proyecto</h2>
+
+                <!-- Fase 1.1 -->
+                <div class="bg-neutral-700 rounded-lg mb-4 shadow-sm border border-neutral-600">
+                    <div class="phase-header flex items-center justify-between p-4 sm:p-5 border-l-8 border-green-400 rounded-l-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-neutral-200 flex items-center">
+                            <span class="text-green-400 mr-3 text-2xl">•</span> Fase 1.1: Diagnóstico General
+                        </h3>
+                        <span class="text-neutral-400 text-2xl font-bold toggle-icon icon-plus"></span>
+                    </div>
+                    <div class="phase-content px-4 pb-4 sm:px-5 sm:pb-5">
+                        <div class="pt-4 border-t border-neutral-600 mt-4">
+                            <h4 class="font-bold text-lg mb-2 text-neutral-200">Objetivos clave:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Comprender el estado actual del negocio.</li>
+                                <li>Identificar puntos críticos de mejora.</li>
+                            </ul>
+                            <h4 class="font-bold text-lg mt-4 mb-2 text-neutral-200">Tareas:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Diagnóstico técnico (app, facturación, promociones, productos).</li>
+                                <li>Evaluación del uso actual de herramientas digitales.</li>
+                                <li>Recolección de información para implementación del CRM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 1.2 -->
+                <div class="bg-neutral-700 rounded-lg mb-4 shadow-sm border border-neutral-600">
+                    <div class="phase-header flex items-center justify-between p-4 sm:p-5 border-l-8 border-green-400 rounded-l-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-neutral-200 flex items-center">
+                            <span class="text-green-400 mr-3 text-2xl">•</span> Fase 1.2: Fundamentos Digitales
+                        </h3>
+                        <span class="text-neutral-400 text-2xl font-bold toggle-icon icon-plus"></span>
+                    </div>
+                    <div class="phase-content px-4 pb-4 sm:px-5 sm:pb-5">
+                        <div class="pt-4 border-t border-neutral-600 mt-4">
+                            <h4 class="font-bold text-lg mb-2 text-neutral-200">Objetivos clave:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Establecer los pilares de digitalización.</li>
+                                <li>Habilitar el registro de datos clave.</li>
+                            </ul>
+                            <h4 class="font-bold text-lg mt-4 mb-2 text-neutral-200">Tareas:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Implementación inicial de un <span class="font-semibold">CRM</span> (clientes, facturación, ventas, leads).</li>
+                                <li>Activación de <span class="font-semibold">reportes dinámicos de ingresos netos, promociones y rentabilidad de productos.</span></li>
+                                <li>Evaluar la viabilidad de <span class="font-semibold">iniciar sesión con Gmail</span> y de implementar <span class="font-semibold">acceso biométrico (huella / Face ID)</span> específicamente para el ingreso físico al gimnasio.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2.1 -->
+                <div class="bg-neutral-700 rounded-lg mb-4 shadow-sm border border-neutral-600">
+                    <div class="phase-header flex items-center justify-between p-4 sm:p-5 border-l-8 border-blue-400 rounded-l-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-neutral-200 flex items-center">
+                            <span class="text-blue-400 mr-3 text-2xl">•</span> Fase 2.1: App y Plataforma Web
+                        </h3>
+                        <span class="text-neutral-400 text-2xl font-bold toggle-icon icon-plus"></span>
+                    </div>
+                    <div class="phase-content px-4 pb-4 sm:px-5 sm:pb-5">
+                        <div class="pt-4 border-t border-neutral-600 mt-4">
+                            <h4 class="font-bold text-lg mb-2 text-neutral-200">Objetivos clave:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Optimizar canales digitales.</li>
+                            </ul>
+                            <h4 class="font-bold text-lg mt-4 mb-2 text-neutral-200">Tareas:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Mejora y rediseño de la <span class="font-semibold">página web</span> (atractiva, funcional y optimizada para SEO).</li>
+                                <li>Rediseño de la <span class="font-semibold">app</span> para incluir:
+                                    <ul class="list-circle list-inside ml-5 space-y-1">
+                                        <li>Ingreso mediante <span class="font-semibold">Gmail</span> y <span class="font-semibold">biometría para acceso al gimnasio.</span></li>
+                                        <li>Pago con tarjeta + generación de suscripciones automáticas.</li>
+                                        <li>Envío de promociones diarias.</li>
+                                        <li>Módulo de facturación automática.</li>
+                                        <li>Módulo de clases/eventos/reservas.</li>
+                                        <li>Activación de <span class="font-semibold">asistente inteligente real.</span></li>
+                                        <li>Mejora visual y funcional.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2.2 -->
+                <div class="bg-neutral-700 rounded-lg mb-4 shadow-sm border border-neutral-600">
+                    <div class="phase-header flex items-center justify-between p-4 sm:p-5 border-l-8 border-blue-400 rounded-l-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-neutral-200 flex items-center">
+                            <span class="text-blue-400 mr-3 text-2xl">•</span> Fase 2.2: Marketing y Comunidad
+                        </h3>
+                        <span class="text-neutral-400 text-2xl font-bold toggle-icon icon-plus"></span>
+                    </div>
+                    <div class="phase-content px-4 pb-4 sm:px-5 sm:pb-5">
+                        <div class="pt-4 border-t border-neutral-600 mt-4">
+                            <h4 class="font-bold text-lg mb-2 text-neutral-200">Objetivos clave:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Iniciar acciones de fidelización y ventas personalizadas.</li>
+                                <li>Optimizar el uso de herramientas digitales como canales de venta.</li>
+                            </ul>
+                            <h4 class="font-bold text-lg mt-4 mb-2 text-neutral-200">Tareas:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Lanzamiento de <span class="font-semibold">campañas de marketing personalizadas</span> (por perfil, hábitos, historial).</li>
+                                <li>Estimulación y automatización de la venta de <span class="font-semibold">suplementos</span> y productos físicos.</li>
+                                <li><span class="font-semibold">Estrategia de venta cruzada</span> con tienda de ropa y suplementos.</li>
+                                <li>Automatización de <span class="font-semibold">facturas para usuarios y proveedores</span> desde el CRM.</li>
+                                <li>Promoción continua de la tienda de suplementos.</li>
+                                <li>Activar funcionalidades de marketing desde la <span class="font-semibold">app de acceso al gimnasio.</span></li>
+                                <li>Desarrollo de informes claros de <span class="font-semibold">ingresos netos</span> y <span class="font-semibold">gestión de gastos operativos.</span></li>
+                                <li>Ejecución de <span class="font-semibold">seguimiento estructurado de leads y oportunidades comerciales.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="bg-neutral-700 rounded-lg mb-4 shadow-sm border border-neutral-600">
+                    <div class="phase-header flex items-center justify-between p-4 sm:p-5 border-l-8 border-purple-400 rounded-l-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-neutral-200 flex items-center">
+                            <span class="text-purple-400 mr-3 text-2xl">•</span> Fase 3: Expansión Comercial
+                        </h3>
+                        <span class="text-neutral-400 text-2xl font-bold toggle-icon icon-plus"></span>
+                    </div>
+                    <div class="phase-content px-4 pb-4 sm:px-5 sm:pb-5">
+                        <div class="pt-4 border-t border-neutral-600 mt-4">
+                            <h4 class="font-bold text-lg mb-2 text-neutral-200">Objetivos clave:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Acompañar el lanzamiento de la tienda de tatuajes.</li>
+                                <li>Impulsar el uso comercial de nuevos espacios (clases, terraza, eventos).</li>
+                            </ul>
+                            <h4 class="font-bold text-lg mt-4 mb-2 text-neutral-200">Tareas:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Activar seguimiento de <span class="font-semibold">leads con recomendaciones</span> (para tatuajes y nuevos eventos).</li>
+                                <li>Sistema de gestión de <span class="font-semibold">eventos y alquiler de espacios</span> (terrace + clases).</li>
+                                <li>Automatización de ventas cruzadas (ej. clases + productos, gym + tattoos).</li>
+                                <li>Generación de <span class="font-semibold">datos analíticos</span> para evaluar decisiones estratégicas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 4 -->
+                <div class="bg-neutral-700 rounded-lg mb-4 shadow-sm border border-neutral-600">
+                    <div class="phase-header flex items-center justify-between p-4 sm:p-5 border-l-8 border-yellow-400 rounded-l-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-neutral-200 flex items-center">
+                            <span class="text-yellow-400 mr-3 text-2xl">•</span> Fase 4: Comunidad y Diferenciación
+                        </h3>
+                        <span class="text-neutral-400 text-2xl font-bold toggle-icon icon-plus"></span>
+                    </div>
+                    <div class="phase-content px-4 pb-4 sm:px-5 sm:pb-5">
+                        <div class="pt-4 border-t border-neutral-600 mt-4">
+                            <h4 class="font-bold text-lg mb-2 text-neutral-200">Objetivos clave:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Construir comunidad en torno a salud, bienestar y vida social.</li>
+                                <li>Ampliar fuentes de ingreso sin perder el foco.</li>
+                            </ul>
+                            <h4 class="font-bold text-lg mt-4 mb-2 text-neutral-200">Tareas:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-300">
+                                <li>Creación de una <span class="font-semibold">plataforma comunitaria</span> (foro, eventos internos, recomendaciones).</li>
+                                <li>Generación de contenido digital (canales YouTube recomendados, ejemplo: estilo <span class="font-semibold">Breaking Bad</span> para storytelling de marca).</li>
+                                <li>Segmentación para acciones de marketing inteligente.</li>
+                                <li>Integración con herramientas de fidelización (recompensas, membresías, etc.).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Acciones Inmediatas -->
+            <section class="mb-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-neutral-100 mb-6 border-b-2 border-blue-500 pb-3">Acciones Inmediatas</h2>
+                <div class="bg-neutral-700 rounded-lg p-5 sm:p-6 shadow-sm border border-neutral-600">
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-neutral-300">
+                            <input type="checkbox" id="demo_funcional" class="h-5 w-5 text-blue-400 rounded border-neutral-500 focus:ring-blue-400 mr-3">
+                            <label for="demo_funcional" class="text-lg">Enviar <span class="font-semibold">demo funcional</span> de automatización + CRM + app (jueves 10 a. m.).</label>
+                        </li>
+                        <li class="flex items-center text-neutral-300">
+                            <input type="checkbox" id="propuesta_grafica" class="h-5 w-5 text-blue-400 rounded border-neutral-500 focus:ring-blue-400 mr-3">
+                            <label for="propuesta_grafica" class="text-lg">Entregar propuesta gráfica de nueva página web y app.</label>
+                        </li>
+                        <li class="flex items-center text-neutral-300">
+                            <input type="checkbox" id="diagnostico_tecnico" class="h-5 w-5 text-blue-400 rounded border-neutral-500 focus:ring-blue-400 mr-3">
+                            <label for="diagnostico_tecnico" class="text-lg">Diagnóstico técnico actual (app, facturación, promociones, productos).</label>
+                        </li>
+                        <li class="flex items-center text-neutral-300">
+                            <input type="checkbox" id="primera_campana" class="h-5 w-5 text-blue-400 rounded border-neutral-500 focus:ring-blue-400 mr-3">
+                            <label for="primera_campana" class="text-lg">Primera campaña de marketing personalizada en test (suplementos o eventos).</label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="bg-neutral-900 p-4 sm:p-5 text-center text-neutral-400 text-sm rounded-b-lg">
+            <p>&copy; 2025 Roadmap Estratégico. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Obtiene todos los elementos que tienen la clase 'phase-header'
+        const phaseHeaders = document.querySelectorAll('.phase-header');
+
+        // Itera sobre cada cabecera de fase para añadir un event listener
+        phaseHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                // Encuentra el elemento 'phase-content' hermano que sigue a la cabecera
+                const content = header.nextElementSibling;
+                // Encuentra el icono de alternancia dentro de la cabecera
+                const toggleIcon = header.querySelector('.toggle-icon');
+
+                // Alterna la clase 'expanded' en el contenido
+                content.classList.toggle('expanded');
+
+                // Cambia el icono de '+' a '-' y viceversa
+                if (content.classList.contains('expanded')) {
+                    toggleIcon.classList.remove('icon-plus');
+                    toggleIcon.classList.add('icon-minus');
+                } else {
+                    toggleIcon.classList.remove('icon-minus');
+                    toggleIcon.classList.add('icon-plus');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
